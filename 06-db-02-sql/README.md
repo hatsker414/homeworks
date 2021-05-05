@@ -47,13 +47,13 @@ psql -U postgres
 
 ## Решение задачи 2
 
-[![Список БД](//https://content.screencast.com/users/hatsker/folders/Capture/media/5bca450e-c122-4fc9-a1e3-5882651eb3ca/LWR_Recording.png)
+[![Список БД] (//https://content.screencast.com/users/hatsker/folders/Capture/media/5bca450e-c122-4fc9-a1e3-5882651eb3ca/LWR_Recording.png)
 
-[![Описание таблиц orders](https://content.screencast.com/users/hatsker/folders/Capture/media/b59641a3-7aa0-4a0f-a7cd-cd5e2ec51861/LWR_Recording.png)
-[![Описание таблиц clients](https://content.screencast.com/users/hatsker/folders/Capture/media/53ca04be-2bed-4b75-8cea-36c9860d1716/LWR_Recording.png)
+[![Описание таблиц orders] (//https://content.screencast.com/users/hatsker/folders/Capture/media/b59641a3-7aa0-4a0f-a7cd-cd5e2ec51861/LWR_Recording.png)
+[![Описание таблиц clients] (//https://content.screencast.com/users/hatsker/folders/Capture/media/53ca04be-2bed-4b75-8cea-36c9860d1716/LWR_Recording.png)
 
-[![SQL Запрос с правами test_admin_user](https://content.screencast.com/users/hatsker/folders/Capture/media/8491bd22-71e2-4f22-bc8b-b13f8c4f3b17/LWR_Recording.png)
-[![SQL Запрос с правами test_simple_user](https://content.screencast.com/users/hatsker/folders/Capture/media/af575d6b-fa9a-4edc-89b0-0aa2546f343f/LWR_Recording.png)
+[![SQL Запрос с правами test_admin_user] (//https://content.screencast.com/users/hatsker/folders/Capture/media/8491bd22-71e2-4f22-bc8b-b13f8c4f3b17/LWR_Recording.png)
+[![SQL Запрос с правами test_simple_user] (//https://content.screencast.com/users/hatsker/folders/Capture/media/af575d6b-fa9a-4edc-89b0-0aa2546f343f/LWR_Recording.png)
 
 ## Задача 3
 
