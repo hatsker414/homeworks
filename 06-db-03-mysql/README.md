@@ -25,7 +25,7 @@
 В следующих заданиях мы будем продолжать работу с данным контейнером.
 
 ## Решение задачи 1
-`
+```
 sudo docker run --name test_mysql -v /my/data:/var/lib/mysql -v /my/bckp:/var/backups -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
 
 sudo docker exec -it  test_mysql bash
@@ -74,7 +74,7 @@ mysql> select * from orders where price>300;
 |  2 | My little pony |   500 |
 +----+----------------+-------+
 1 row in set (0.00 sec)
-`
+```
 ## Задача 2
 
 Создайте пользователя test в БД c паролем test-pass, используя:
@@ -92,7 +92,7 @@ mysql> select * from orders where price>300;
 **приведите в ответе к задаче**.
 
 ## Решение задачи 2
-`
+```
 CREATE USER 'test'@'localhost' 
    ATTRIBUTE '{"fname": "Pretty", "lname": "James"}';
    IDENTIFIED WITH mysql_native_password BY 'test-pass'  
@@ -111,7 +111,8 @@ mysql> SELECT * FROM INFORMATION_SCHEMA.USER_ATTRIBUTES  WHERE USER = 'test' AND
 | test | localhost | {"fname": "Pretty", "lname": "James"} |
 +------+-----------+---------------------------------------+
 1 row in set (0.00 sec)
-`
+```
+
 ## Задача 3
 
 Установите профилирование `SET profiling = 1`.
@@ -124,7 +125,7 @@ mysql> SELECT * FROM INFORMATION_SCHEMA.USER_ATTRIBUTES  WHERE USER = 'test' AND
 - на `InnoDB`
 
 ## Решение задачи 3
-`
+```
 mysql> SELECT TABLE_NAME, ENGINE FROM information_schema.TABLES where TABLE_SCHEMA = 'test_db';
 +------------+--------+
 | TABLE_NAME | ENGINE |
@@ -158,8 +159,7 @@ mysql> SHOW PROFILES;
 |        6 | 0.00092125 | SELECT TABLE_NAME, ENGINE FROM information_schema.TABLES where TABLE_SCHEMA = 'test_db' |
 +----------+------------+-----------------------------------------------------------------------------------------+
 6 rows in set, 1 warning (0.00 sec)
-`
-
+```
 
 ## Задача 4 
 
@@ -176,7 +176,7 @@ mysql> SHOW PROFILES;
 Приведите в ответе измененный файл `my.cnf`.
 
 ## Решение задачи 4
-`
+```
 [mysqld]
 pid-file        = /var/run/mysqld/mysqld.pid
 socket          = /var/run/mysqld/mysqld.sock
@@ -192,4 +192,4 @@ innodb_buffer_pool_size=333M
 innodb_file_per_table=1
 
 innodb_flush_log_at_trx_commit=2
-`
+```
