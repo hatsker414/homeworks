@@ -33,7 +33,8 @@ sudo docker run --name my_postgres1 -e POSTGRES_PASSWORD=123456 -d -p 5432:5432 
 
 sudo docker exec -it my_postgres1 bash
 
-root@a9d88a586ff8:/# psql -U postgres```
+root@a9d88a586ff8:/# psql -U postgres
+```
 
 ## Задача 2
 
@@ -51,6 +52,7 @@ root@a9d88a586ff8:/# psql -U postgres```
 с наибольшим средним значением размера элементов в байтах.
 
 **Приведите в ответе** команду, которую вы использовали для вычисления и полученный результат.
+
 
 ## Решение задачи 2
 
@@ -79,7 +81,6 @@ test_database=# ANALYZE VERBOSE orders;
 INFO:  analyzing "public.orders"
 INFO:  "orders": scanned 1 of 1 pages, containing 8 live rows and 0 dead rows; 8 rows in sample, 8 estimated total rows
 ANALYZE
-
 ```
 выборка по столбцу 
 
