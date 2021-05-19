@@ -106,7 +106,8 @@ CREATE INDEX ON orders_2 (price);
 INSERT INTO orders_new (select * FROM orders);  
 DROP TABLE orders;
 ALTER TABLE  orders_new RENAME TO orders;
-COMMIT;```
+COMMIT;
+```
 
 ## Задача 4
 
