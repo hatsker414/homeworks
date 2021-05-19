@@ -23,14 +23,12 @@
 4 вывод описания содержимого таблиц`\d`
 5 выход из psql `\q`
 
-```sudo docker run --name my_postgres1 -e POSTGRES_PASSWORD=123456 -d -p 5432:5432 -v /postgres/data:/va
-r/lib/postgresql/data -v /postgres/bckp:/var/backups postgres
+```
+sudo docker run --name my_postgres1 -e POSTGRES_PASSWORD=123456 -d -p 5432:5432 -v /postgres/data:/var/lib/postgresql/data -v /postgres/bckp:/var/backups postgres
 
 sudo docker exec -it my_postgres1 bash
 
-root@a9d88a586ff8:/# psql -U postgres
-
-```
+root@a9d88a586ff8:/# psql -U postgres```
 
 ## Задача 2
 
@@ -51,11 +49,10 @@ root@a9d88a586ff8:/# psql -U postgres
 
 ## Решение задачи 2
 
-``` 
+```
 postgres=# CREATE DATABASE test_database;
 
 root@a9d88a586ff8:/# psql test_database < test_dump.sql -U postgres
-
 
 postgres=# \c test_database
 You are now connected to database "test_database" as user "postgres".
@@ -81,7 +78,8 @@ ANALYZE
 ```
 выборка по столбцу 
 
-```SELECT * FROM pg_stats where tablename = 'orders';```
+```
+SELECT * FROM pg_stats where tablename = 'orders';```
 
 столбец attname "title" avg_width 16 байт
 
@@ -98,7 +96,8 @@ ANALYZE
 
 ## Решение задачи 3
 
-```BEGIN TRANSACTION
+```
+BEGIN TRANSACTION
 CREATE TABLE orders_new ( id      SERIAL NOT NULL,    title   varchar (80),    price   int4) PARTITION BY RANGE (price);
 CREATE TABLE orders_1    partition of orders_new   for values from (499) to (MAXVALUE);
 CREATE INDEX ON orders_1 (price);
