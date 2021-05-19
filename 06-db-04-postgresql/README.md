@@ -18,10 +18,15 @@
 ## Решение Задачи 1
 
 1 вывод списка БД  `\l`
+
 2 подключение к БД `\c`
+
 3 вывод списка таблиц `\dt`
+
 4 вывод описания содержимого таблиц`\d`
+
 5 выход из psql `\q`
+
 
 ```
 sudo docker run --name my_postgres1 -e POSTGRES_PASSWORD=123456 -d -p 5432:5432 -v /postgres/data:/var/lib/postgresql/data -v /postgres/bckp:/var/backups postgres
@@ -70,16 +75,15 @@ test_database=# \l
                |          |          |            |            | postgres=CTc/postgres
 (5 rows)
 
-
 test_database=# ANALYZE VERBOSE orders;
 INFO:  analyzing "public.orders"
 INFO:  "orders": scanned 1 of 1 pages, containing 8 live rows and 0 dead rows; 8 rows in sample, 8 estimated total rows
 ANALYZE
+
 ```
 выборка по столбцу 
 
-```
-SELECT * FROM pg_stats where tablename = 'orders';```
+SELECT * FROM pg_stats where tablename = 'orders';
 
 столбец attname "title" avg_width 16 байт
 
