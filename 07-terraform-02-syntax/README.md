@@ -66,5 +66,4 @@ secret_key     ****************2ndm              env
  
 ## Решение задачи 2
 - Packer
-[terraform_github](https://github.com/hatsker414/devops-netology/tree/main/terraform)
-
+- [terraform_github](https://github.com/hatsker414/devops-netology/tree/main/terraform)
