@@ -19,6 +19,28 @@
     * Какая максимальная длина имени? 
     * Какому регулярному выражению должно подчиняться имя? 
     
+## Решение задачи 1
+
+[ссылка](https://github.com/hashicorp/terraform-provider-aws/blob/main/aws/provider.go#L14)
+
+```
+"name": {
+	    Type:          schema.TypeString,
+	    Optional:      true,
+	    Computed:      true,
+	    ForceNew:      true,
+	    ConflictsWith: []string{"name_prefix"},
+```
+
+Имена очередей должны состоять только из прописных и строчных букв ASCII, цифр, знаков подчеркивания и дефисов, 
+и должны иметь длину от 1 до 80 символов.
+
+[regexp](https://github.com/hashicorp/terraform-provider-aws/blob/e171ab86e1a19d6544cb1166c621c2a786e5a0bb/aws/resource_aws_sqs_queue.go#L415)
+
+```
+re = regexp.MustCompile(`^[a-zA-Z0-9_-]{1,80}$`)
+```
+
 ## Задача 2. (Не обязательно) 
 В рамках вебинара и презентации мы разобрали как создать свой собственный провайдер на примере кофемашины. 
 Также вот официальная документация о создании провайдера: 
